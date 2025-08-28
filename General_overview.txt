@@ -1,0 +1,19 @@
+Data Acquisition: Chouhan et al., 2019; 10.17632/hb74ynkjcn.1
+
+Following steps were followed in general
+A. Preprocessing: 
+    Resize all images to consistent size (256x256)
+    Augmentation (+/- 30 degree, horizontal/vertical flip)
+    Brightness and Contrast adjustment
+    Segmentation of leaf (If background clutter exists, segmenting the leaf from the background isolates relevant features and improves model focus)
+    Feature extraction
+    EDA on training set
+B. Selection of model --> CNN
+C. Choosing Hyperparameters 
+    Learning Rate: gradient descent, Typical starting values: 0.001 to 0.0001.
+    Batch Size (Number of images processed before updating model weights: 16, 32, 64 depends on GPU memory)
+    Number of Epochs 
+    Optimizer: ADAM
+    Dropout Rate (if used) Typical values: 0.2 to 0.5. 
+    Weight Initialization and Regularization: Weight decay or L2 regularization helps reduce overfitting.: Common weight decay values: 0.0001 to 0.001.
+D. Validation/testing (Accuracy, Precision, recall, F1 score, confusion matrix)
