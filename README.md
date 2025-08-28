@@ -1,2 +1,9 @@
 # IDC409-GRP32
 Made for doing a project for leaf identification
+
+Authors:
+1. Prathamesh Avinash Shelke: PH25013
+2. George A: MS23049
+
+General Overview:
+Preprocessing of images is a crucial step in building an efficient classification model, ensuring that data is standardized and informative features are retained. All images are resized to a consistent resolution, typically 256×256 or 128×128 pixels, to reduce computational overhead while maintaining adequate detail. To enhance generalization, data augmentation techniques such as rotations within ±30°, horizontal and vertical flips, and adjustments in brightness and contrast are applied. If the dataset contains cluttered backgrounds, leaf segmentation is performed to isolate the region of interest, allowing the model to focus on relevant features. Following preprocessing, exploratory data analysis (EDA) on the training set provides insights into class distribution, variability, and feature diversity, guiding further processing and balancing if needed. For feature extraction, convolutional neural networks (CNNs) are commonly employed, with possible exploration of ensemble approaches or hybrid CNN–VAE frameworks for improved representation learning. Model training requires careful selection of hyperparameters, including learning rate, batch size 64, and number of epochs 100. The ADAM optimizer is preferred for its adaptive learning capabilities. Regularization strategies such as dropout (0.2–0.5) and weight decay (0.0001–0.001) help mitigate overfitting and improve model robustness. Proper weight initialization ensures stable convergence. Model performance is validated through key metrics including accuracy, precision, recall, F1 score, and confusion matrix, providing a comprehensive evaluation of classification capability. This structured pipeline ensures that the final trained model is both accurate and generalizable across unseen datasets.
